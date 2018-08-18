@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>ArchivedTodos</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item-sliding *ngFor="let todo of _tp.getArchivedTodos; let i = index">
+            <ion-item>{{ todo }}</ion-item>
+
+            <ion-item-options slide="right">
+                <button ion-button>
+                    <ion-icon name="undo"></ion-icon>
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+</ion-content>
